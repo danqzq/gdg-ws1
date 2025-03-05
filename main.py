@@ -16,10 +16,10 @@ BACKGROUND_COLOR = (127, 64, 0)
 
 TEXT_COLOR = (0, 0, 0)
 TEXT_SIZE = 24
-font = pygame.font.Font(None, TEXT_SIZE)
 
 # Pygame setup
 pygame.init()
+font = pygame.font.Font(None, TEXT_SIZE)
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
@@ -34,6 +34,8 @@ diamond_sprite = pygame.transform.scale(diamond_sprite, (RESOURCE_SIZE, RESOURCE
 async def game_loop(websocket):
     players = {}
     resources = []
+
+    global font
 
     while True:
         for event in pygame.event.get():
