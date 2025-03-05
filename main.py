@@ -74,7 +74,6 @@ async def game_loop(websocket):
             window.blit(diamond_sprite, (resource["x"] - RESOURCE_SIZE // 2, resource["y"] - RESOURCE_SIZE // 2))
 
         # Display leaderboard
-        font = pygame.font.Font(None, TEXT_SIZE)
         text = font.render("Leaderboard", True, TEXT_COLOR)
         window.blit(text, (10, 10))
 
